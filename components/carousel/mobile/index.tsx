@@ -6,19 +6,19 @@ import Link from 'next/link';
 const CustomCarousel = () => {
   const slides = [
     {
-      image: 'https://www.cinecast.xyz/src/img/thumbnail/death-note.webp',
+      image: 'https://bs-uploads.toptal.io/blackfish-uploads/components/open_graph_image/8960807/og_image/optimized/secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png',
       title: 'First Slide',
       description: 'This is the first demo slide.',
       link: '/first',
     },
     {
-      image: 'https://www.cinecast.xyz/src/img/thumbnail/chainsaw-man.webp',
+      image: 'https://datawider.com/wp-content/uploads/2019/11/How-to-Learn-Python.jpg',
       title: 'Second Slide',
       description: 'This is the second demo slide.',
       link: '/second',
     },
     {
-      image: 'https://www.cinecast.xyz/src/img/thumbnail/death-note.webp',
+      image: 'https://www.felixvemmer.com/posts/why-next-js/twitter-card.png',
       title: 'Third Slide',
       description: 'This is the third demo slide.',
       link: '/third',
