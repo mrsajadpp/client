@@ -8,13 +8,16 @@ const Header = () => {
 
     const handleMenu = () => {
         const menu = document.getElementById('mobileMenu');
-
-        if (menu.classList.contains('shown')) {
-            menu.classList.remove('shown');
-            menu.classList.add('hidden');
+        if (menu) {
+            if (menu.classList.contains('shown')) {
+                menu.classList.remove('shown');
+                menu.classList.add('hidden');
+            } else {
+                menu.classList.remove('hidden');
+                menu.classList.add('shown');
+            }
         } else {
-            menu.classList.remove('hidden');
-            menu.classList.add('shown');
+            console.error('Menu element not found.');
         }
     };
 
