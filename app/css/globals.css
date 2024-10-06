@@ -40,8 +40,8 @@ button {
 .mobile-header {
     display: flex;
     width: 100%;
-    height: 65px;
-    border-bottom: 1px solid var(--light-background-secondary);;
+    height: 60px;
+    border-bottom: 1px solid var(--light-background-tertiary);
     position: fixed;
     top: 0px;
     z-index: 997;
@@ -49,7 +49,7 @@ button {
 }
 
 .mobile-header .left {
-    width: 70px;
+    width: 60px;
     height: 100%;
 }
 
@@ -83,7 +83,7 @@ button {
 }
 
 .mobile-header .right {
-    width: 70px;
+    width: 60px;
     height: 100%;
 }
 
@@ -126,13 +126,13 @@ button {
     scrollbar-width: 0px;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid var(--light-background-secondary);;
+    border-bottom: 1px solid var(--light-background-tertiary);
 }
 
 .menuBar .menuArea .menuItems .topMenu {
     width: 100%;
-    height: 65px;
-    border-bottom: 1px solid var(--light-background-secondary);;
+    height: 60px;
+    border-bottom: 1px solid var(--light-background-tertiary);
 }
 
 .menuBar .menuArea .menuItems .topMenu .left {
@@ -209,7 +209,7 @@ button {
     width: 100%;
     height: 40px;
     overflow: hidden;
-    border: 1px solid var(--light-background-secondary);
+    border: 1px solid var(--light-background-tertiary);
 }
 
 .searchBar .searchArea .searchInp form {
@@ -471,11 +471,11 @@ ul {
 
 .desktop-header {
     width: 100%;
-    height: 65px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    border-bottom: 1px solid var(--light-background-secondary);;
+    border-bottom: 1px solid var(--light-background-tertiary);
     position: fixed;
     top: 0px;
     background-color: var(--light-background-primary);
@@ -539,7 +539,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--light-background-secondary);
+    border: 1px solid var(--light-background-tertiary);
 }
 
 .desktop-header .search form input {

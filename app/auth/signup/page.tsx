@@ -23,7 +23,7 @@ export default function App() {
             <div className="container">
                 <form id="form" className="regForm">
                     <div className="inputImage">
-                        <img loading="lazy" decoding="async" src={grovixLog.src} alt="" />
+                        <img  src={grovixLog.src} alt="" />
                     </div>
                     <div className="inputBox">
                         <input type="text" name="first_name" id="firts_name" placeholder="First Name" />
