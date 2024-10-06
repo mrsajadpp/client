@@ -6,11 +6,11 @@ import grovixLog from '@/assets/image/grovix-lab.png';
 import Image from 'next/image';
 import Link from "next/link";
 
-export async function getServerSideProps() {
-    return {
-        props: {},
-    };
-}
+// export async function getServerSideProps() {
+//     return {
+//         props: {},
+//     };
+// }
 
 export const metadata = {
     title: "Login / Grovix Lab",

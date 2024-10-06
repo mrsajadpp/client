@@ -5,11 +5,11 @@ import Image from 'next/image';
 import Link from "next/link";
 
 
-export async function getServerSideProps() {
-    return {
-        props: {},
-    };
-}
+// export async function getServerSideProps() {
+//     return {
+//         props: {},
+//     };
+// }
 
 export const metadata = {
     title: "SignUp / Grovix Lab",
