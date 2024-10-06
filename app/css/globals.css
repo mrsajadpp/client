@@ -171,6 +171,17 @@ button {
     align-items: center;
     justify-content: center;
     width: 50px;
+    height: 100%;
+}
+
+.menuBar .menuArea .menuItems .menuItem a .menuIcon i {
+    font-size: 20px;
+    color: #212121;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menuBar .menuArea .menuItems .menuItem a .menuText {
@@ -586,6 +597,7 @@ ul {
     .mobile-header {
         display: none;
     }
+
     #carouselExampleIndicators {
         display: none !important;
     }
