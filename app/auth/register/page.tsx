@@ -81,7 +81,7 @@ export default function App() {
                             By using our services, you are accepting our <Link href="/terms-of-service" target="_blank">terms of service</Link>.
                         </span>
                     </div>
-                    <div className="inputBox">
+                    <div className="inputBox inputButton">
                         <button type="submit">
                             Register
                         </button>

@@ -68,7 +68,7 @@ export default function App() {
                             <Link href="/auth/recover">Forgot password?</Link>
                         </span>
                     </div>
-                    <div className="inputBox">
+                    <div className="inputBox inputButton">
                         <button type="submit">
                             LogIn
                         </button>
