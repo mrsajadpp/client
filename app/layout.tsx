@@ -1,6 +1,4 @@
 import "@/app/css/globals.css";
-import Header from "@/components/Header";
-import Menu from "@/components/Menu";
 
 export const metadata = {
   title: "Next.js",
@@ -15,8 +13,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <Menu />
         {children}
       </body>
     </html>
