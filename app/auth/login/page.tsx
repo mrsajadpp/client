@@ -1,4 +1,3 @@
-'use client'
 import { useState } from "react";
 import "@fontsource/poppins";
 import "@/app/css/login.css";
@@ -8,16 +7,6 @@ import Image from 'next/image';
 import Link from "next/link";
 
 export default function App() {
-    const handlePass = () => {
-        const passwordInput = document.getElementById('password');
-        if (passwordInput) {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            passwordInput.textContent = type === 'password' ? '👁️' : '🔒';
-        } else {
-            console.error('Password element not found.');
-        }
-    }
 
     return (
         <>
@@ -31,7 +20,7 @@ export default function App() {
                     </div>
                     <div className="inputBox" style={{ background: "#f0f0f0" }}>
                         <input type="password" placeholder="Password" name="password" id="password" />
-                        <button type="button" id="togglePassword" onClick={handlePass}
+                        <button type="button" id="togglePassword"
                             style={{ marginLeft: "-30px", background: "none", border: "none", cursor: "pointer" }}>
                             👁️
                         </button>
@@ -54,6 +43,17 @@ export default function App() {
                     </div>
                 </form>
             </div>
+            <script
+                data-partytown-config
+                dangerouslySetInnerHTML={{
+                    __html: `document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById('password');
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        this.textContent = type === 'password' ? '👁️' : '🔒';
+    });`,
+                }}
+            />
         </>
     );
 }
