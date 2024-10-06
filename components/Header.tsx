@@ -137,9 +137,9 @@ const Header = () => {
                         <div className="menuItem">
                             <a href="/auth/login" className='registerButton'>
                                 <div className="menuIcon">
-                                    <i className="fi fi-rr-enter"></i>
+                                    <i style={{ color: "#0078e8" }} className="fi fi-rr-enter"></i>
                                 </div>
-                                <div className="menuText">
+                                <div style={{ color: "#0078e8" }} className="menuText">
                                     Login
                                 </div>
                             </a>
