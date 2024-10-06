@@ -22,12 +22,12 @@ export default function App() {
     return (
         <>
             <div className="container">
-                <form action="/auth/login" method="post" className="regForm">
+                <form className="regForm">
                     <div className="inputImage">
-                        <img  src={grovixLog.src} alt="" />
+                        <img src={grovixLog.src} alt="" />
                     </div>
                     <div className="inputBox">
-                        <input type="email" name="email" value="" id="email" placeholder="Email" />
+                        <input type="email" name="email" id="email" placeholder="Email" />
                     </div>
                     <div className="inputBox" style={{ background: "#f0f0f0" }}>
                         <input type="password" placeholder="Password" name="password" id="password" />
@@ -45,7 +45,7 @@ export default function App() {
                         </span>
                     </div>
                     <div className="inputBox">
-                        <button>
+                        <button type="submit">
                             LogIn
                         </button>
                     </div>
