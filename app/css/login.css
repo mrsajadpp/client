@@ -155,6 +155,24 @@ textarea {
     font-size: 11px
 }
 
+.container .regForm .continueWith {
+    background: var(--light-background-tertiary);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.container .regForm .continueWith button {
+    background: var(--light-background-primary) !important;
+    width: 98% !important;
+    height: 90% !important;
+    border-radius: 100px !important;
+}
+
+.container .regForm .continueWith button span {
+    color: #000;
+}
+
 .disabled {
     background-color: #afc9e0 !important
 }

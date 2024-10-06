@@ -86,6 +86,11 @@ export default function App() {
                             Register
                         </button>
                     </div>
+                    {/* <div className="inputBox inputButton continueWith">
+                        <button type="button">
+                            <span>Continue with Google</span>
+                        </button>
+                    </div> */}
                     <div className="inputText">
                         <span>Do you have an account? <Link href="/auth/login">Login</Link>.</span>
                     </div>
