@@ -21,7 +21,7 @@ export default function App() {
     return (
         <>
             <div className="container">
-                <form action="/auth/signup" method="post" className="regForm">
+                <form id="form" className="regForm">
                     <div className="inputImage">
                         <img loading="lazy" decoding="async" src={grovixLog.src} alt="" />
                     </div>
@@ -56,7 +56,7 @@ export default function App() {
                         </span>
                     </div>
                     <div className="inputBox">
-                        <button>
+                        <button type="submit">
                             SignUp
                         </button>
                     </div>
