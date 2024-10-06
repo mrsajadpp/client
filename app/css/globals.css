@@ -2,7 +2,7 @@
 
 :root {
     /* Dark theme (left side of the image) */
-    --dark-primary: #F5C518;
+    --dark-primary: #0078e8;
     --dark-text-primary: #E5E5E5;
     --dark-text-secondary: #A9A9A9;
     --dark-background-primary: #121212;
@@ -11,7 +11,7 @@
     --dark-accent: #1FBFB8;
 
     /* Light theme (right side of the image) */
-    --light-primary: #F5C518;
+    --light-primary: #0078e8;
     --light-text-primary: #000000;
     --light-text-secondary: #666666;
     --light-background-primary: #FFFFFF;
@@ -180,6 +180,23 @@ button {
     width: calc(100% - 50px);
     color: var(--light-text-primary);
 }
+
+/* .registerButton {
+    background: #0078e8;
+    border-radius: 6px;
+    margin-top: 10px;
+    color: #fff;
+    width: 97% !important;
+}
+
+.registerButtonBord {
+    background: transparent;
+    border: 2px #000 solid;
+    border-radius: 6px;
+    margin-top: 10px;
+    color: #fff;
+    width: 97% !important;
+} */
 
 /* Mobile Search */
 
