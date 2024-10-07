@@ -5,6 +5,7 @@ import Image from 'next/image';
 import MobileHeader from "@/components/mobile_header";
 import DeskHeader from "@/components/desktop_header";
 import Gride from "@/components/gride";
+import Footer from "@/components/footer";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <DeskHeader />
         <Gride />
       </div>
+      <Footer />
     </>
   );
 }

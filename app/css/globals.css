@@ -375,7 +375,8 @@ button {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none
+    user-select: none;
+    z-index: 999;
 }
 
 .footer>* {
@@ -664,6 +665,10 @@ ul {
     }
 
     #carouselExampleIndicators {
+        display: none !important;
+    }
+
+    .footer {
         display: none !important;
     }
 }
