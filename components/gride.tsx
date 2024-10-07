@@ -9,13 +9,13 @@ const Gride = () => {
         <>
             <div className="grid-container">
                 <div className="card">
-                    <a href="https://example.com/solid-principles">
+                    <Link href="/article/dbhyuhehf">
                         <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/what-is-a-role-of-design-engineer.webp" alt="SOLID Principles"/>
                             <div className="card-content">
                                 <p className="card-title">SOLID Principles</p>
                                 <p className="card-paragraph">An introduction to SOLID principles in programming and how they can improve your code structure.</p>
                             </div>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="card">
