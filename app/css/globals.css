@@ -526,7 +526,7 @@ ul {
 
 .rightSide {
     height: 60px;
-    width: calc(100% - 300px);
+    width: calc(100% - 302px);
     position: fixed;
     top: 0px;
     right: 0px;
