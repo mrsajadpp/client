@@ -10,7 +10,7 @@ const Gride = () => {
             <div className="grid-container">
                 <div className="card">
                     <a href="https://example.com/solid-principles">
-                        <img src="https://via.placeholder.com/400x200" alt="SOLID Principles"/>
+                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/what-is-a-role-of-design-engineer.webp" alt="SOLID Principles"/>
                             <div className="card-content">
                                 <p className="card-title">SOLID Principles</p>
                                 <p className="card-paragraph">An introduction to SOLID principles in programming and how they can improve your code structure.</p>
@@ -20,7 +20,7 @@ const Gride = () => {
 
                 <div className="card">
                     <a href="https://example.com/skill-recommendation">
-                        <img src="https://via.placeholder.com/400x200" alt="Skill Recommendation Algorithm"/>
+                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/how-to-use-flexbox-in-tailwindcss.webp" alt="Skill Recommendation Algorithm"/>
                             <div className="card-content">
                                 <p className="card-title">Skill Recommendation Algorithm</p>
                                 <p className="card-paragraph">How Peerlist recommends skills using collaborative filtering techniques to match your profile.</p>
@@ -30,7 +30,7 @@ const Gride = () => {
 
                 <div className="card">
                     <a href="https://example.com/docker-mongodb">
-                        <img src="https://via.placeholder.com/400x200" alt="Docker to MongoDB"/>
+                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/what-are-pick-and-omit-utility-types-in-typescript.webp" alt="Docker to MongoDB"/>
                             <div className="card-content">
                                 <p className="card-title">Docker to MongoDB</p>
                                 <p className="card-paragraph">Guide on how to transfer data between Docker and a MongoDB instance securely and efficiently.</p>
