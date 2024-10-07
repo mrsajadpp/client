@@ -651,6 +651,10 @@ ul {
     .desktopMenu {
         display: none;
     }
+
+    .rightSide {
+        display: none;
+    }
 }
 
 /* Show desktop header only on larger screens */
