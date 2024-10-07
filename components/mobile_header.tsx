@@ -64,14 +64,14 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="menuItem">
-                            <a href="/">
+                            <Link href="/">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-house-blank"></i>
                                 </div>
                                 <div className="menuText">
                                     Home
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="menuItem">
                             <a href="/">
@@ -106,14 +106,14 @@ const Header = () => {
                             </a>
                         </div> */}
                         <div className="menuItem">
-                            <a href="/auth/login" className='registerButton'>
+                            <Link href="/auth/login" className='registerButton'>
                                 <div className="menuIcon">
                                     <i style={{ color: "#0078e8" }} className="fi fi-rr-enter"></i>
                                 </div>
                                 <div style={{ color: "#0078e8" }} className="menuText">
                                     Login
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="menuItems">
