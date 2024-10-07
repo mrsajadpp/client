@@ -495,7 +495,17 @@ ul {
     padding: 10px
 }
 
+.topContainer {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Desktop Header */
+
+.desktopMenu {
+    width: 300px;
+    height: 100vh;
+}
 
 .desktop-header {
     width: 300px;
@@ -504,9 +514,9 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    position: fixed;
     overflow: hidden;
     border: 1px solid var(--light-background-tertiary) !important;
-    position: fixed;
     top: 0px;
     left: 0px;
     background-color: var(--light-background-primary);
@@ -546,7 +556,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: scroll;
 }
 
 .desktop-header .menu-area .menu-list .menuItem {
@@ -625,6 +634,10 @@ ul {
 /* Hide desktop header on mobile */
 @media (max-width: 768px) {
     .desktop-header {
+        display: none;
+    }
+
+    .desktopMenu {
         display: none;
     }
 }

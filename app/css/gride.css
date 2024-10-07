@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    /* Dark theme (left side of the image) */
+    --dark-primary: #0078e8;
+    --dark-text-primary: #E5E5E5;
+    --dark-text-secondary: #A9A9A9;
+    --dark-background-primary: #121212;
+    --dark-background-secondary: #1A1A1A;
+    --dark-background-tertiary: #242424;
+    --dark-accent: #1FBFB8;
+
+    /* Light theme (right side of the image) */
+    --light-primary: #0078e8;
+    --light-text-primary: #000000;
+    --light-text-secondary: #666666;
+    --light-background-primary: #FFFFFF;
+    --light-background-secondary: #F2F2F2;
+    --light-background-tertiary: #E0E0E0;
+    --light-accent: #1FBFB8;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(10px, 3vw, 20px); /* Dynamically adjust the gap based on viewport size */
+    width: calc(100% - 300px) !important;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    background-color: var(--light-background-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid var(--light-background-tertiary);
+    height: 200px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--light-text-primary);
+    padding: 16px;
+    text-align: start;
+    z-index: 2;
+}
+
+.card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-title {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #fff; /* White text for overlay */
+    position: relative;
+    z-index: 2;
+}
+
+.card-paragraph {
+    font-size: 10px;
+    color: #ddd; /* Light text for overlay */
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+}
+
+.card a {
+    color: var(--light-accent);
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        margin-top: 60px;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        gap: 15px; /* Smaller gap for smaller screens */
+    }
+    
+    .card-title {
+        font-size: 15px;
+    }
+
+    .card-paragraph {
+        font-size: 13px;
+    }
+}
