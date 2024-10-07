@@ -546,6 +546,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: scroll;
 }
 
 .desktop-header .menu-area .menu-list .menuItem {
@@ -582,6 +583,12 @@ ul {
     align-items: center;
     justify-content: start;
     padding-left: 10px;
+    transition: padding-left ease-in 0.2s;
+}
+
+.desktop-header .menu-area .menu-list .menuItem:hover .menuText {
+    width: calc(100% - 45px);
+    padding-left: 20px;
 }
 
 .desktop-header .menu-area .menu-list .menuItem .menuIcon i {
@@ -605,7 +612,7 @@ ul {
 }
 
 .desktop-header .menu-area .profileArea {
-    background: var(--light-background-tertiary);
+    background: var(--light-background-secondary);
     border-radius: 7px;
     padding-left: 10px;
     margin-top: 40px;
