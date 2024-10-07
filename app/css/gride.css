@@ -36,6 +36,7 @@ body {
     gap: clamp(10px, 3vw, 20px); /* Dynamically adjust the gap based on viewport size */
     width: calc(100% - 300px) !important;
     margin: 0 auto;
+    margin-top: 60px;
     padding: 20px;
 }
 
@@ -102,7 +103,6 @@ body {
 
 @media (max-width: 768px) {
     .grid-container {
-        margin-top: 60px;
         width: 100% !important;
     }
 }

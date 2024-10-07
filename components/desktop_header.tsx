@@ -82,6 +82,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <div className="rightSide"></div>
         </>
     );
 };
