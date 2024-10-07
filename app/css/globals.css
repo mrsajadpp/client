@@ -498,92 +498,123 @@ ul {
 /* Desktop Header */
 
 .desktop-header {
-    width: 100%;
-    height: 60px;
+    width: 300px;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
     overflow: hidden;
-    border-bottom: 1px solid var(--light-background-tertiary);
+    border: 1px solid var(--light-background-tertiary) !important;
     position: fixed;
     top: 0px;
+    left: 0px;
     background-color: var(--light-background-primary);
     z-index: 997;
 }
 
-.desktop-header .logo {
-    width: 250px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding-left: 15px;
-}
-
-.desktop-header .logo a {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-.desktop-header .logo a img {
-    width: 150px;
-}
-
-.desktop-header .menu {
-    width: calc(100% - (250px + 350px));
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-.desktop-header .menu .menuItem {
-    width: 90px;
-    height: 100%;
+.desktop-header .logo-area {
+    width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.desktop-header .menu .menuItem a {
+.desktop-header .logo-area a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-header .logo-area a img {
+    width: 170px;
+}
+
+.desktop-header .menu-area {
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.desktop-header .menu-area .menu-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktop-header .menu-area .menu-list .menuItem {
+    width: 50%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-header .menu-area .menu-list .menuItem a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 0px;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--light-text-primary);
+    color: #212121;
 }
 
-.desktop-header .search {
-    width: 350px;
+.desktop-header .menu-area .menu-list .menuItem .menuIcon {
+    width: 30px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.desktop-header .search form {
-    width: 90%;
-    height: 60%;
-    overflow: hidden;
+.desktop-header .menu-area .menu-list .menuItem .menuText {
+    width: calc(100% - 30px);
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid var(--light-background-tertiary);
-}
-
-.desktop-header .search form input {
-    height: 100%;
-    width: calc(100% - 60px);
-    border: none;
+    justify-content: start;
     padding-left: 10px;
-    color: var(--light-text-secondary);
 }
 
-.desktop-header .search form button {
-    width: 60px;
-    height: 100%;
-    border: none;
-    background: var(--light-background-secondary);
+.desktop-header .menu-area .menu-list .menuItem .menuIcon i {
+    font-size: 20px;
+    color: #212121;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.desktop-header .menu-area .menu-list .menuItem .menuIcon .profile {
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-header .menu-area .profileArea {
+    background: var(--light-background-tertiary);
+    border-radius: 7px;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+.desktop-header .menu-area .menu-list .menuItem .menuIcon .profile img {
+    height: 100%;
+}
+
 
 /* Hide desktop header on mobile */
 @media (max-width: 768px) {

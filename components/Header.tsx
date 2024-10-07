@@ -47,35 +47,79 @@ const Header = () => {
           </button> */}
                 </div>
             </header>
-            {/* <header className="desktop-header">
-                <div className="logo">
+            <div className="desktop-header">
+                <div className="logo-area">
                     <Link href="/">
-                        <img src={grovixLog.src} alt="Cinecast Entertainments" />
+                        <img src={grovixLog.src} alt="CineCast" />
                     </Link>
                 </div>
-                <div className="menu">
-                    <div className="menuItem">
-                        <a href="/">Home</a>
-                    </div>
-                    <div className="menuItem">
-                        <a href="./trending.html">Trending</a>
-                    </div>
-                    <div className="menuItem">
-                        <a href="./contact-us.html">Contact</a>
+                <div className="menu-area">
+                    <div className="menu-list">
+                        <div className="menuItem">
+                            <a href="/">
+                                <div className="menuIcon">
+                                    <i className="fi fi-rr-house-blank"></i>
+                                </div>
+                                <div className="menuText">
+                                    Home
+                                </div>
+                            </a>
+                        </div>
+                        <div className="menuItem">
+                            <a href="/">
+                                <div className="menuIcon">
+                                    <i className="fi fi-rr-search"></i>
+                                </div>
+                                <div className="menuText">
+                                    Search
+                                </div>
+                            </a>
+                        </div>
+                        <div className="menuItem">
+                            <a href="./trending.html">
+                                <div className="menuIcon">
+                                    <i className="fi fi-rr-arrow-trend-up"></i>
+                                </div>
+                                <div className="menuText">
+                                    Trending
+                                </div>
+                            </a>
+                        </div>
+                        <div className="menuItem">
+                            <a href="/auth/login" className='registerButton'>
+                                <div className="menuIcon">
+                                    <i style={{ color: "#0078e8" }} className="fi fi-rr-enter"></i>
+                                </div>
+                                <div style={{ color: "#0078e8" }} className="menuText">
+                                    Login
+                                </div>
+                            </a>
+                        </div>
+                        <div className="menuItem">
+                            <a href="./contact-us.html">
+                                <div className="menuIcon">
+                                    <i className="fi fi-rr-at"></i>
+                                </div>
+                                <div className="menuText">
+                                    Contact
+                                </div>
+                            </a>
+                        </div>
+                        <div className="menuItem profileArea">
+                            <a href="./contact-us.html">
+                                <div className="menuIcon">
+                                    <div className="profile">
+                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQFbxYf0nBc8QA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718216442374?e=1733961600&v=beta&t=sq7_Ul7B1TnCWmMOX2aadbKGvwruMbJ-kRL1pqa1d-w" alt="" />
+                                    </div>
+                                </div>
+                                <div className="menuText">
+                                    Sajad
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div className="search">
-                    <form action="/">
-                        <input type="text" name="search" id="search" placeholder="Search for anime, series, etc." />
-                        <button>
-                            <svg xmlns="http://w3.org/2000/svg" height="29px" viewBox="0 -960 960 960" width="29px" fill="#212121">
-                                <path
-                                    d="M382.23-340.23q-100.36 0-169.74-69.43-69.37-69.42-69.37-169.5 0-100.07 69.32-169.53 69.31-69.46 169.49-69.46t169.65 69.47q69.46 69.47 69.46 169.62 0 41.91-14.08 80.75-14.08 38.85-37.58 67.26l228.35 227.81q8 7.97 8.19 19.53.19 11.56-8.4 20.06-8.6 8.5-19.87 8.5-11.27 0-19.64-8.37L529.88-391.89q-29.73 24.77-68.42 38.22-38.69 13.44-79.23 13.44Zm-.15-55.96q76.8 0 129.9-53.02 53.1-53.03 53.1-130 0-76.98-53.1-129.98-53.1-53-130-53t-129.9 53.02q-53 53.02-53 130 0 76.98 53.01 129.98 53.02 53 129.99 53Z" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </header> */}
+            </div>
 
             {/* Menu */}
             <div className="menuBar hidden" id="mobileMenu">
