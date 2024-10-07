@@ -40,7 +40,7 @@ const Gride = () => {
 
                 <div className="card">
                     <a href="https://example.com/google-one-tap">
-                        <img src="https://via.placeholder.com/400x200" alt="Google One Tap Login"/>
+                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/python-features.webp" alt="Google One Tap Login"/>
                             <div className="card-content">
                                 <p className="card-title">Google One Tap Login</p>
                                 <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
@@ -49,7 +49,7 @@ const Gride = () => {
                 </div>
                 <div className="card">
                     <a href="https://example.com/google-one-tap">
-                        <img src="https://via.placeholder.com/400x200" alt="Google One Tap Login"/>
+                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/peerlist-interaction-design-challenge.webp" alt="Google One Tap Login"/>
                             <div className="card-content">
                                 <p className="card-title">Google One Tap Login</p>
                                 <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
@@ -58,7 +58,7 @@ const Gride = () => {
                 </div>
                 <div className="card">
                     <a href="https://example.com/google-one-tap">
-                        <img src="https://via.placeholder.com/400x200" alt="Google One Tap Login"/>
+                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/slack-story/story-of-slack-side-project.webp" alt="Google One Tap Login"/>
                             <div className="card-content">
                                 <p className="card-title">Google One Tap Login</p>
                                 <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
@@ -67,7 +67,7 @@ const Gride = () => {
                 </div>
                 <div className="card">
                     <a href="https://example.com/google-one-tap">
-                        <img src="https://via.placeholder.com/400x200" alt="Google One Tap Login"/>
+                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/navigating-through-layoffs-book-recommendation.webp" alt="Google One Tap Login"/>
                             <div className="card-content">
                                 <p className="card-title">Google One Tap Login</p>
                                 <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
@@ -76,7 +76,7 @@ const Gride = () => {
                 </div>
                 <div className="card">
                     <a href="https://example.com/google-one-tap">
-                        <img src="https://via.placeholder.com/400x200" alt="Google One Tap Login"/>
+                        <img src="https://substackcdn.com/image/fetch/w_1280,h_853,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbafa72f7-7687-4286-a87c-3a96a465387c_2400x1260.png" alt="Google One Tap Login"/>
                             <div className="card-content">
                                 <p className="card-title">Google One Tap Login</p>
                                 <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
