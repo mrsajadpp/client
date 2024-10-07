@@ -577,7 +577,7 @@ ul {
 }
 
 .desktop-header .menu-area .menu-list .menuItem .menuText {
-    width: calc(100% - 30px);
+    width: calc(100% - 35px);
     height: 100%;
     display: flex;
     align-items: center;
@@ -587,7 +587,6 @@ ul {
 }
 
 .desktop-header .menu-area .menu-list .menuItem:hover .menuText {
-    width: calc(100% - 45px);
     padding-left: 20px;
 }
 
