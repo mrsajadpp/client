@@ -3,7 +3,7 @@ import Script from 'next/script';
 import Image from 'next/image';
 import MobileHeader from "@/components/mobile_header";
 import DeskHeader from "@/components/desktop_header";
-import Gride from "@/components/intrest_gride";
+import Gride from "@/components/trending_gride";
 import Footer from "@/components/footer";
 import Link from "next/link";
 
@@ -24,7 +24,13 @@ export default async function App() {
             <div className="topContainer">
                 <div className="desktopMenu"></div>
                 <DeskHeader page={"trending"} path={path} />
-                <Gride />
+                <div className="mainContainer">
+                    <div className="fitCo">
+                        <div className="grideGroup">
+                            <Gride />
+                        </div>
+                    </div>
+                </div>
             </div>
             <Footer />
         </>

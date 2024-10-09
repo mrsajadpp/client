@@ -99,10 +99,17 @@ body {
     z-index: 2;
 }
 
+.t-grid-container {
+    margin-top: 60px;
+}
+
 @media (max-width: 768px) {
     .grid-container {
         width: 100% !important;
         margin-top: 0px;
+    }
+    .t-grid-container {
+        margin-top: 0px !important;
     }
 }
 
