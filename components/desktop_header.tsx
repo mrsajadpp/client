@@ -38,14 +38,14 @@ const Header = () => {
                             </a>
                         </div>
                         <div className="menuItem">
-                            <a href="./trending.html">
+                            <Link href="/trending">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-arrow-trend-up"></i>
                                 </div>
                                 <div className="menuText">
                                     Trending
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="menuItem">
                             <Link href="/auth/login" className='registerButton'>
