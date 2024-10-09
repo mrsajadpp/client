@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "@fontsource/poppins";
 import "@/app/css/login.css";
 import grovixLog from '@/assets/image/grovix-lab.png';
@@ -20,6 +20,10 @@ export default function App() {
     const togglePasswordVisibility = () => {
         setIsPasswordVisible(prevState => !prevState);
     };
+
+    useEffect(() => {
+        document.title = "Register / Grovix Lab";
+    }, []);
 
     return (
         <>
