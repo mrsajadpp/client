@@ -31,7 +31,7 @@
 
 @media (max-width: 768px) {
     .articleContainer {
-        width: 100% !important;
+        width: calc(100% - 40px) !important;
         margin-top: 60px;
     }
 
