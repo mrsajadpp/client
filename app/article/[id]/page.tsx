@@ -11,7 +11,7 @@ import "@/app/css/article.css";
 export default async function App() {
     return (
         <>
-            <MobileHeader page={"null"}/>
+            <MobileHeader page={"null"} path={""} />
             <div className="topContainer">
                 <div className="desktopMenu"></div>
                 <DeskHeader page={"null"} path={""} />

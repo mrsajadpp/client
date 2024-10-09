@@ -14,7 +14,7 @@ export const metadata = {
 export default async function App() {
   return (
     <>
-      <MobileHeader page={"home"} />
+      <MobileHeader page={"home"} path={""} />
       <div className="topContainer">
         <div className="desktopMenu"></div>
         <DeskHeader page={"home"} path={""} />

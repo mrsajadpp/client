@@ -15,12 +15,12 @@ export const metadata = {
 export default async function App() {
     const path = (
         <>
-            <Link href="/">Home</Link> &gt; <Link href="/trending">Trending</Link>
+            <Link href="/">Home</Link>&nbsp;&gt;&nbsp;<Link href="/trending">Trending</Link>
         </>
     );
     return (
         <>
-            <MobileHeader page={"trending"} />
+            <MobileHeader page={"trending"} path={path} />
             <div className="topContainer">
                 <div className="desktopMenu"></div>
                 <DeskHeader page={"trending"} path={path} />

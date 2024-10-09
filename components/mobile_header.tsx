@@ -7,9 +7,10 @@ import grovixLog from '@/assets/image/grovix-lab.png';
 // Define the props interface
 interface MobileHeaderProps {
     page: 'home' | 'search' | 'trending' | 'null';
+    path: React.ReactNode;
 }
 
-const Header: React.FC<MobileHeaderProps> = ({ page }) => {
+const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
 
     const handleMenu = () => {
         const menu = document.getElementById('mobileMenu');
@@ -52,6 +53,10 @@ const Header: React.FC<MobileHeaderProps> = ({ page }) => {
           </button> */}
                 </div>
             </header>
+
+            {path ? (<div className="pathArea">
+                <span>{path}</span>
+            </div>) : <div style={{ marginTop: "60px" }}></div>}
 
             {/* Menu */}
             <div className="menuBar hidden" id="mobileMenu">
