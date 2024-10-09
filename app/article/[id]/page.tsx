@@ -42,6 +42,9 @@ export default async function App() {
                                 </section>
                             </article>
                         </div>
+                        <div className="sectionTitle">
+                            <h2>Related Articles</h2>
+                        </div>
                         <div className="grideGroup">
                             <Gride />
                         </div>
