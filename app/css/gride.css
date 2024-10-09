@@ -108,6 +108,7 @@ body {
         width: 100% !important;
         margin-top: 0px;
     }
+
     .t-grid-container {
         margin-top: 0px !important;
     }
@@ -125,5 +126,98 @@ body {
 
     .card-paragraph {
         font-size: 13px;
+    }
+}
+
+.card__image {
+    height: 100% !important;
+}
+
+.skeleton-card {
+    position: relative;
+    background-color: #f0f0f0;
+    /* Light grey background for skeleton */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    /* Light grey border */
+    height: 200px;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 100%;
+    background-color: #d0d0d0;
+    /* Darker grey for image area */
+    background: linear-gradient(90deg, #d0d0d0 25%, #f0f0f0 50%, #d0d0d0 75%);
+    /* Gradient for glowing effect */
+    background-size: 200% 100%;
+    /* Extend the gradient */
+    animation: shimmer 1.5s infinite;
+    /* Shimmer animation */
+}
+
+.skeleton-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    color: #000000;
+    /* Black text */
+}
+
+.skeleton-title {
+    height: 20px;
+    width: 70%;
+    background-color: #bbbb;
+    /* Grey for title */
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #bbbb 25%, #f0f0f0 50%, #bbbb 75%);
+    /* Gradient for glowing effect */
+    background-size: 200% 100%;
+    /* Extend the gradient */
+    animation: shimmer 1.5s infinite;
+    /* Shimmer animation */
+}
+
+.skeleton-paragraph {
+    height: 12px;
+    width: 90%;
+    background-color: #bbbb;
+    /* Grey for paragraph */
+    background: linear-gradient(90deg, #bbbb 25%, #f0f0f0 50%, #bbbb 75%);
+    /* Gradient for glowing effect */
+    background-size: 200% 100%;
+    /* Extend the gradient */
+    animation: shimmer 1.5s infinite;
+    /* Shimmer animation */
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+        /* Start position */
+    }
+
+    100% {
+        background-position: -200% 0;
+        /* End position */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .skeleton-title {
+        height: 18px;
+    }
+
+    .skeleton-paragraph {
+        height: 10px;
     }
 }
