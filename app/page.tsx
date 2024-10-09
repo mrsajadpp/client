@@ -18,7 +18,13 @@ export default async function App() {
       <div className="topContainer">
         <div className="desktopMenu"></div>
         <DeskHeader page={"home"} path={""} />
-        <Gride />
+        <div className="mainContainer">
+          <div className="fitCo">
+            <div className="grideGroup">
+              <Gride />
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </>

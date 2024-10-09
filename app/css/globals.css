@@ -755,3 +755,37 @@ ul {
         display: none !important;
     }
 }
+
+.mainContainer {
+    width: calc(100% - 300px) !important;
+    height: 100%;
+}
+
+.fitCo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.grideGroup {
+    overflow: hidden !important;
+    width: 100%;
+}
+
+.grideGroup .grid-container {
+    padding: 20px !important;
+    width: calc(100% - 40px) !important;
+}
+
+@media (max-width: 768px) {
+    .articleContainer {
+        margin-top: 30px;
+    }
+
+    .mainContainer {
+        width: 100% !important;
+    }
+}
