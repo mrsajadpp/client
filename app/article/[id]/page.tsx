@@ -11,10 +11,10 @@ import "@/app/css/article.css";
 export default async function App() {
     return (
         <>
-            <MobileHeader />
+            <MobileHeader page={"null"}/>
             <div className="topContainer">
                 <div className="desktopMenu"></div>
-                <DeskHeader />
+                <DeskHeader page={"null"} />
                 <div className="mainContainer">
                     <div className="articleContainer">
                         <article className="article">

@@ -14,10 +14,10 @@ export const metadata = {
 export default async function App() {
     return (
         <>
-            <MobileHeader />
+            <MobileHeader page={"trending"} />
             <div className="topContainer">
                 <div className="desktopMenu"></div>
-                <DeskHeader />
+                <DeskHeader page={"trending"} />
                 <Gride />
             </div>
             <Footer />

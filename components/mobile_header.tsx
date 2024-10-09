@@ -4,7 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import grovixLog from '@/assets/image/grovix-lab.png';
 
-const Header = () => {
+// Define the props interface
+interface MobileHeaderProps {
+    page: 'home' | 'search' | 'trending' | 'null';
+}
+
+const Header: React.FC<MobileHeaderProps> = ({ page }) => {
 
     const handleMenu = () => {
         const menu = document.getElementById('mobileMenu');
@@ -63,7 +68,7 @@ const Header = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="menuItem">
+                        <div className={`menuItem ${page === "home" ? "active" : "no-active"}`}>
                             <Link href="/">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-house-blank"></i>
@@ -73,7 +78,7 @@ const Header = () => {
                                 </div>
                             </Link>
                         </div>
-                        <div className="menuItem">
+                        <div className={`menuItem ${page === "search" ? "active" : "no-active"}`}>
                             <a href="/">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-search"></i>
@@ -83,7 +88,7 @@ const Header = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className="menuItem">
+                        <div className={`menuItem ${page === "trending" ? "active" : "no-active"}`}>
                             <Link href="/trending">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-arrow-trend-up"></i>

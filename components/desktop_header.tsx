@@ -4,7 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import grovixLog from '@/assets/image/grovix-lab.png';
 
-const Header = () => {
+// Define the props interface
+interface MobileHeaderProps {
+    page: 'home' | 'search' | 'trending' | 'null';
+}
+
+
+const Header: React.FC<MobileHeaderProps> = () => {
 
     return (
         <>
