@@ -541,6 +541,17 @@ ul {
     background-color: var(--light-background-primary);
     border-bottom: 1px solid var(--light-background-tertiary) !important;
     z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+.rightSide span {
+    margin-left: 10px;
+}
+
+.rightSide span a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .desktop-header .logo-area {

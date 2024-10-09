@@ -14,7 +14,7 @@ export default async function App() {
             <MobileHeader page={"null"}/>
             <div className="topContainer">
                 <div className="desktopMenu"></div>
-                <DeskHeader page={"null"} />
+                <DeskHeader page={"null"} path={""} />
                 <div className="mainContainer">
                     <div className="articleContainer">
                         <article className="article">

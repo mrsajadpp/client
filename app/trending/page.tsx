@@ -5,6 +5,7 @@ import MobileHeader from "@/components/mobile_header";
 import DeskHeader from "@/components/desktop_header";
 import Gride from "@/components/intrest_gride";
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 export const metadata = {
     title: "Trending Articles / Grovix Lab",
@@ -12,12 +13,17 @@ export const metadata = {
 };
 
 export default async function App() {
+    const path = (
+        <>
+            <Link href="/">Home</Link> &gt; <Link href="/trending">Trending</Link>
+        </>
+    );
     return (
         <>
             <MobileHeader page={"trending"} />
             <div className="topContainer">
                 <div className="desktopMenu"></div>
-                <DeskHeader page={"trending"} />
+                <DeskHeader page={"trending"} path={path} />
                 <Gride />
             </div>
             <Footer />

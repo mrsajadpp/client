@@ -7,10 +7,11 @@ import grovixLog from '@/assets/image/grovix-lab.png';
 // Define the props interface
 interface MobileHeaderProps {
     page: 'home' | 'search' | 'trending' | 'null';
+    path: React.ReactNode;
 }
 
 
-const Header: React.FC<MobileHeaderProps> = ({ page }) => {
+const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
 
     return (
         <>
@@ -88,7 +89,9 @@ const Header: React.FC<MobileHeaderProps> = ({ page }) => {
                     </div>
                 </div>
             </div>
-            <div className="rightSide"></div>
+            <div className="rightSide">
+                <span>{path}</span>
+            </div>
         </>
     );
 };
