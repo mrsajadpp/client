@@ -56,9 +56,9 @@ const Header: React.FC<MobileHeaderProps> = ({ page }) => {
                         <div className="menuItem">
                             <Link href="/auth/login" className='registerButton'>
                                 <div className="menuIcon">
-                                    <i style={{ color: "#0078e8" }} className="fi fi-rr-enter"></i>
+                                    <i style={{ color: "red" }} className="fi fi-rr-enter"></i>
                                 </div>
-                                <div style={{ color: "#0078e8" }} className="menuText">
+                                <div style={{ color: "red" }} className="menuText">
                                     Login
                                 </div>
                             </Link>

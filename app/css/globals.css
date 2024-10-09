@@ -189,7 +189,15 @@ button {
     align-items: center;
     justify-content: start;
     width: calc(100% - 50px);
-    color: var(--light-text-primary);
+    color: #212121;
+}
+
+.menuBar .menuArea .menuItems .active a .menuText {
+    color: var(--light-primary) !important;
+}
+
+.menuBar .menuArea .menuItems .active a .menuIcon i {
+    color: var(--light-primary) !important;
 }
 
 /* .registerButton {
@@ -619,6 +627,14 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.desktop-header .menu-area .menu-list .active a .menuText {
+    color: var(--light-primary) !important;
+}
+
+.desktop-header .menu-area .menu-list .active a .menuIcon i {
+    color: var(--light-primary) !important;
 }
 
 .desktop-header .menu-area .menu-list .menuItem .menuIcon .profile {
