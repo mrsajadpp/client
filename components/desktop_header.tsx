@@ -10,7 +10,7 @@ interface MobileHeaderProps {
 }
 
 
-const Header: React.FC<MobileHeaderProps> = () => {
+const Header: React.FC<MobileHeaderProps> = ({ page }) => {
 
     return (
         <>
@@ -23,7 +23,7 @@ const Header: React.FC<MobileHeaderProps> = () => {
                 </div>
                 <div className="menu-area">
                     <div className="menu-list">
-                        <div className="menuItem">
+                        <div className={`menuItem ${page === "home" ? "active" : "no-active"}`}>
                             <Link href="/">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-house-blank"></i>
@@ -33,7 +33,7 @@ const Header: React.FC<MobileHeaderProps> = () => {
                                 </div>
                             </Link>
                         </div>
-                        <div className="menuItem">
+                        <div className={`menuItem ${page === "search" ? "active" : "no-active"}`}>
                             <a href="/">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-search"></i>
@@ -43,7 +43,7 @@ const Header: React.FC<MobileHeaderProps> = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className="menuItem">
+                        <div className={`menuItem ${page === "trending" ? "active" : "no-active"}`}>
                             <Link href="/trending">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-arrow-trend-up"></i>
