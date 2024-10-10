@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import "@/app/css/gride.css";
+import { getCookie } from 'cookies-next';
 
 interface CardData {
     href: string;
@@ -42,7 +43,7 @@ const Gride = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let jwt = localStorage.getItem("token");
+                const jwt = getCookie('token');
                 const res = await fetch(jwt ? 'http://192.168.1.60:3001/api/article/auth/list/fetch/recomended' : 'http://192.168.1.60:3001/api/article/list/fetch', {
                     method: 'GET',
                     headers: {

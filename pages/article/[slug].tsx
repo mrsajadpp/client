@@ -6,6 +6,7 @@ import MobileHeader from "@/components/mobile_header";
 import DeskHeader from "@/components/desktop_header";
 import Gride from "@/components/related_gride";
 import Footer from "@/components/footer";
+import { getCookie } from 'cookies-next';
 import React from 'react';
 import { GetServerSideProps } from 'next';
 import "@/app/css/article.css";
@@ -95,11 +96,14 @@ export const getServerSideProps: GetServerSideProps<ArticlePageProps> = async (c
     const { slug } = context.params as { slug: string }; // Explicitly type params
 
     try {
+        const jwt = await getCookie('token', { req: context.req, res: context.res });
+
         // Make a POST request to your API with the slug
-        const response = await fetch('http://192.168.1.60:3001/api/article/fetch', {
+        const response = await fetch(jwt ? 'http://192.168.1.60:3001/api/article/auth/fetch' : 'http://192.168.1.60:3001/api/article/fetch', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                ...(jwt && { 'Authorization': `${jwt}` })
             },
             body: JSON.stringify({ slug }), // Send the slug in the request body
         });

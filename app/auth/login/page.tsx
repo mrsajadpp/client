@@ -6,6 +6,7 @@ import grovixLog from '@/assets/image/grovix-lab.png';
 import Image from 'next/image';
 import Link from "next/link";
 import Head from 'next/head';
+import { setCookie } from 'cookies-next';
 
 
 // export const metadata = {
@@ -40,6 +41,7 @@ export default function App() {
         if (res.ok) {
             const { jwt_token } = await res.json();
             localStorage.setItem('token', jwt_token);
+            setCookie('token', jwt_token);
             location.href = "/";
         } else {
             alert("Login failed");
