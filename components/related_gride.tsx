@@ -48,7 +48,6 @@ const Gride: React.FC<Article> = ({ id }) => {
             try {
                 const res = await fetch('http://192.168.1.60:3001/api/article/list/fetch/related?id=' + id);
                 const result = await res.json();
-                console.log(result);
 
                 const articles = result.articles.map((article: any) => ({
                     href: `/article/${article.slug}`,

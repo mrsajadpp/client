@@ -1,92 +1,83 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import "@/app/css/gride.css";
 
-const Gride = () => {
-    return (
-        <>
-            <div className="grid-container t-grid-container">
-                <div className="card">
-                    <Link href="/article/dbhyuhehf">
-                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/what-is-a-role-of-design-engineer.webp" alt="SOLID Principles" />
-                        <div className="card-content">
-                            <p className="card-title">SOLID Principles</p>
-                            <p className="card-paragraph">An introduction to SOLID principles in programming and how they can improve your code structure.</p>
-                        </div>
-                    </Link>
-                </div>
+interface CardData {
+    href: string;
+    imageSrc: string;
+    alt: string;
+    title: string;
+    description: string;
+}
 
-                <div className="card">
-                    <a href="https://example.com/skill-recommendation">
-                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/how-to-use-flexbox-in-tailwindcss.webp" alt="Skill Recommendation Algorithm" />
-                        <div className="card-content">
-                            <p className="card-title">Skill Recommendation Algorithm</p>
-                            <p className="card-paragraph">How Peerlist recommends skills using collaborative filtering techniques to match your profile.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div className="card">
-                    <a href="https://example.com/docker-mongodb">
-                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/what-are-pick-and-omit-utility-types-in-typescript.webp" alt="Docker to MongoDB" />
-                        <div className="card-content">
-                            <p className="card-title">Docker to MongoDB</p>
-                            <p className="card-paragraph">Guide on how to transfer data between Docker and a MongoDB instance securely and efficiently.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div className="card">
-                    <a href="https://example.com/google-one-tap">
-                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/python-features.webp" alt="Google One Tap Login" />
-                        <div className="card-content">
-                            <p className="card-title">Google One Tap Login</p>
-                            <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
-                        </div>
-                    </a>
-                </div>
-                <div className="card">
-                    <a href="https://example.com/google-one-tap">
-                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/peerlist-interaction-design-challenge.webp" alt="Google One Tap Login" />
-                        <div className="card-content">
-                            <p className="card-title">Google One Tap Login</p>
-                            <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
-                        </div>
-                    </a>
-                </div>
-                <div className="card">
-                    <a href="https://example.com/google-one-tap">
-                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/slack-story/story-of-slack-side-project.webp" alt="Google One Tap Login" />
-                        <div className="card-content">
-                            <p className="card-title">Google One Tap Login</p>
-                            <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
-                        </div>
-                    </a>
-                </div>
-                <div className="card">
-                    <a href="https://example.com/google-one-tap">
-                        <img src="https://dqy38fnwh4fqs.cloudfront.net/blog/og-image/navigating-through-layoffs-book-recommendation.webp" alt="Google One Tap Login" />
-                        <div className="card-content">
-                            <p className="card-title">Google One Tap Login</p>
-                            <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
-                        </div>
-                    </a>
-                </div>
-                <div className="card">
-                    <a href="https://example.com/google-one-tap">
-                        <img src="https://substackcdn.com/image/fetch/w_1280,h_853,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbafa72f7-7687-4286-a87c-3a96a465387c_2400x1260.png" alt="Google One Tap Login" />
-                        <div className="card-content">
-                            <p className="card-title">Google One Tap Login</p>
-                            <p className="card-paragraph">Learn how to implement Google One Tap login in your Next.js application for seamless authentication.</p>
-                        </div>
-                    </a>
-                </div>
-
+const Card: React.FC<CardData> = ({ href, imageSrc, alt, title, description }) => (
+    <div className="card">
+        <Link href={href}>
+            <Image src={imageSrc} alt={alt} width={500} height={200} className="card__image" layout="responsive" />
+            <div className="card-content">
+                <p className="card-title">{title}</p>
+                <p className="card-paragraph">{description}</p>
             </div>
-        </>
-    )
+        </Link>
+    </div>
+);
+
+// Skeleton Loader Component
+const SkeletonLoader = () => (
+    <div className="skeleton-card">
+        <div className="skeleton-image"></div>
+        <div className="skeleton-content">
+            <div className="skeleton-title"></div>
+            <div className="skeleton-paragraph"></div>
+        </div>
+    </div>
+);
+
+const Gride = () => {
+    const [data, setData] = useState<CardData[]>([]);
+    const [loading, setLoading] = useState(true); // State for loading
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch('http://192.168.1.60:3001/api/article/list/fetch/trending');
+                const result = await res.json();
+
+                const articles = result.articles.map((article: any) => ({
+                    href: `/article/${article.slug}`,
+                    imageSrc: article.cover_image,
+                    alt: article.title,
+                    title: article.title,
+                    description: article.description
+                }));
+                setData(articles);
+                setLoading(false);
+            } catch (error) {
+                console.error("Error fetching articles:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+        <div className="grid-container">
+            {loading
+                ? Array.from({ length: 6 }).map((_, index) => <SkeletonLoader key={index} />) // Display skeleton loaders
+                : data.map((card, index) => (
+                    <Card
+                        key={index}
+                        href={card.href}
+                        imageSrc={card.imageSrc}
+                        alt={card.alt}
+                        title={card.title}
+                        description={card.description}
+                    />
+                ))}
+        </div>
+    );
 };
 
 export default Gride;
