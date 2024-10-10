@@ -7,7 +7,7 @@ import { getCookie } from 'cookies-next';
 
 // Define the props interface
 interface MobileHeaderProps {
-    page: 'home' | 'search' | 'trending' | 'null';
+    page: 'home' | 'search' | 'trending' | "dashboard" | 'null';
     path: React.ReactNode;
 }
 
@@ -125,7 +125,7 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                                 </div>
                             </Link>
                         </div>
-                        {jwt ? (<div className="menuItem">
+                        {jwt ? (<div className={`menuItem ${page === "dashboard" ? "active" : "no-active"}`}>
                             <Link href="/dashboard">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-apps"></i>
@@ -153,7 +153,7 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                                     </div>
                                 </div>
                                 <div className="menuText">
-                                    {user ? `${user.first_name} ${user.last_name}` : null}
+                                    <span className='nametext'>{user ? `${user.first_name}` : null}</span>
                                 </div>
                             </Link>
                         </div>) : (<></>)}

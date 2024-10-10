@@ -30,6 +30,12 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.nametext {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 input,
 button {
     outline: none !important;
