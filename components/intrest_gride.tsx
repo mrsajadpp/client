@@ -42,7 +42,14 @@ const Gride = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('http://192.168.1.60:3001/api/article/list/fetch');
+                let jwt = localStorage.getItem("token");
+                const res = await fetch(jwt ? 'http://192.168.1.60:3001/api/article/auth/list/fetch/recomended' : 'http://192.168.1.60:3001/api/article/list/fetch', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ...(jwt && { 'Authorization': `${jwt}` })
+                    }
+                });
                 const result = await res.json();
 
                 const articles = result.articles.map((article: any) => ({

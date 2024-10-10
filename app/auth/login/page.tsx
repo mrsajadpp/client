@@ -14,6 +14,8 @@ import Head from 'next/head';
 // };
 
 export default function App() {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     // State to track password visibility
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -26,18 +28,41 @@ export default function App() {
         document.title = "Login / Grovix Lab";
     }, []);
 
+    const login = async (username: string, password: string) => {
+        const res = await fetch('http://192.168.1.60:3001/api/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: username, password }),
+        });
+
+        if (res.ok) {
+            const { jwt_token } = await res.json();
+            localStorage.setItem('token', jwt_token);
+            location.href = "/";
+        } else {
+            alert("Login failed");
+        }
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault(); // Prevent page reload
+        login(username, password); // Call login function
+    };
+
     return (
         <>
             <Head>
                 <title>Login / Grovix Lab</title>
             </Head>
             <div className="container">
-                <form className="regForm">
+                <form className="regForm" onSubmit={handleSubmit}>
                     <div className="inputImage">
                         <img src={grovixLog.src} alt="Grovix Lab Logo" />
                     </div>
                     <div className="inputBox">
-                        <input type="email" name="email" id="email" placeholder="Email" />
+                        <input type="email" name="email" id="email" onChange={(e) => setUsername(e.target.value)} placeholder="Email" />
                     </div>
                     <div className="inputBox" style={{ background: "#f0f0f0" }}>
                         {/* Password Input */}
@@ -46,6 +71,7 @@ export default function App() {
                             placeholder="Password"
                             name="password"
                             id="password"
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                         {/* Toggle Password Visibility Button */}
                         <button
