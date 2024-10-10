@@ -1,8 +1,9 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import grovixLog from '@/assets/image/grovix-lab.png';
+import { getCookie } from 'cookies-next';
 
 // Define the props interface
 interface MobileHeaderProps {
@@ -26,6 +27,14 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
             console.error('Menu element not found.');
         }
     };
+
+    const [jwt, setJwt] = useState<string | null>(null);
+
+    useEffect(() => {
+        const token = getCookie("token");
+
+        setJwt(token ? String(token) : null);
+    }, []);
 
     return (
         <>
@@ -104,6 +113,18 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                             </Link>
                         </div>
                     </div>
+                    {jwt ? (<div className="menuItems">
+                        <div className="menuItem">
+                            <Link href="/dashboard">
+                                <div className="menuIcon">
+                                    <i className="fi fi-rr-apps"></i>
+                                </div>
+                                <div className="menuText">
+                                    Dashboard
+                                </div>
+                            </Link>
+                        </div>
+                    </div>) : (<></>)}
                     <div className="menuItems">
                         {/* <div className="menuItem">
                             <a href="/auth/register" className='registerButton'>
@@ -116,26 +137,14 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                             </a>
                         </div> */}
                         <div className="menuItem">
-                            <Link href="/auth/login" className='registerButton'>
+                            <Link href={`${jwt ? "/auth/logout" : "/auth/login"}`} className='registerButton'>
                                 <div className="menuIcon">
                                     <i style={{ color: "red" }} className="fi fi-rr-enter"></i>
                                 </div>
                                 <div style={{ color: "red" }} className="menuText">
-                                    Login
+                                    {jwt ? "Logout" : "Login"}
                                 </div>
                             </Link>
-                        </div>
-                    </div>
-                    <div className="menuItems">
-                        <div className="menuItem">
-                            <a href="./contact-us.html">
-                                <div className="menuIcon">
-                                    <i className="fi fi-rr-at"></i>
-                                </div>
-                                <div className="menuText">
-                                    Contact
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </div>

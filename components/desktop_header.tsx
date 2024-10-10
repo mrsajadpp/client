@@ -1,8 +1,9 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import grovixLog from '@/assets/image/grovix-lab.png';
+import { getCookie } from 'cookies-next';
 
 // Define the props interface
 interface MobileHeaderProps {
@@ -12,6 +13,15 @@ interface MobileHeaderProps {
 
 
 const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
+
+    const [jwt, setJwt] = useState<string | null>(null);
+
+    useEffect(() => {
+        const token = getCookie("token");
+
+        setJwt(token ? String(token) : null);
+    }, []);
+
 
     return (
         <>
@@ -54,28 +64,28 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                                 </div>
                             </Link>
                         </div>
+                        {jwt ? (<div className="menuItem">
+                            <Link href="/dashboard">
+                                <div className="menuIcon">
+                                    <i className="fi fi-rr-apps"></i>
+                                </div>
+                                <div className="menuText">
+                                    Dashboard
+                                </div>
+                            </Link>
+                        </div>) : (<></>)}
                         <div className="menuItem">
-                            <Link href="/auth/login" className='registerButton'>
+                            <Link href={`${jwt ? "/auth/logout" : "/auth/login"}`} className='registerButton'>
                                 <div className="menuIcon">
                                     <i style={{ color: "red" }} className="fi fi-rr-enter"></i>
                                 </div>
                                 <div style={{ color: "red" }} className="menuText">
-                                    Login
+                                    {jwt ? "Logout" : "Login"}
                                 </div>
                             </Link>
                         </div>
-                        <div className="menuItem">
-                            <a href="./contact-us.html">
-                                <div className="menuIcon">
-                                    <i className="fi fi-rr-at"></i>
-                                </div>
-                                <div className="menuText">
-                                    Contact
-                                </div>
-                            </a>
-                        </div>
-                        <div className="menuItem profileArea">
-                            <a href="./contact-us.html">
+                        {jwt ? (<div className="menuItem profileArea">
+                            <Link href={`${jwt ? "/dashboard" : ""}`}>
                                 <div className="menuIcon">
                                     <div className="profile">
                                         <img src="https://media.licdn.com/dms/image/v2/D5603AQFbxYf0nBc8QA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718216442374?e=1733961600&v=beta&t=sq7_Ul7B1TnCWmMOX2aadbKGvwruMbJ-kRL1pqa1d-w" alt="" />
@@ -84,8 +94,8 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                                 <div className="menuText">
                                     Sajad
                                 </div>
-                            </a>
-                        </div>
+                            </Link>
+                        </div>) : (<></>)}
                     </div>
                 </div>
             </div>

@@ -48,6 +48,7 @@ const App: React.FC<ArticlePageProps> = ({ article }) => {
             <MobileHeader page={"null"} path={""} />
             <div className="topContainer">
                 <DeskHeader page={"null"} path={""} />
+                <div className="desktopMenu"></div>
                 <div className="mainContainer">
                     <div className="fitCo">
                         <div className="articleContainer">
