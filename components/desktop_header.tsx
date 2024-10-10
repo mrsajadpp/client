@@ -12,15 +12,76 @@ interface MobileHeaderProps {
 }
 
 
+interface Address {
+    address_line_one?: string;
+    addressline_two?: string;
+    country?: string;
+    state?: string;
+    city?: string;
+    zip_code?: string;
+}
+
+interface Interests {
+    [key: string]: number; // Dynamic keys with numeric values
+}
+
+export interface User {
+    first_name: string;
+    last_name: string;
+    email: string;
+    country_code: number;
+    contact_no: number;
+    date?: Date; // Optional, as it has a default value
+    admin: boolean;
+    verified: boolean;
+    status: boolean;
+    sex?: string;
+    about?: string;
+    address?: Address; // Optional
+    date_of_birth?: string; // Optional
+    interests?: Interests; // Optional
+    profile_url?: string;
+}
+
+
 const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
 
     const [jwt, setJwt] = useState<string | null>(null);
+    const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
         const token = getCookie("token");
 
         setJwt(token ? String(token) : null);
     }, []);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            if (jwt) {
+                try {
+                    const response = await fetch('http://192.168.1.60:3001/api/user/own/user-data', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `${jwt}`,
+                            'Content-Type': 'application/json',
+                        },
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch user data');
+                    }
+
+                    const data = await response.json();
+
+                    setUser(data);
+                } catch (err) {
+                    console.log(err);
+                }
+            };
+        };
+
+        fetchUserData();
+    }, [jwt]);
 
 
     return (
@@ -88,11 +149,11 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                             <Link href={`${jwt ? "/dashboard" : ""}`}>
                                 <div className="menuIcon">
                                     <div className="profile">
-                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQFbxYf0nBc8QA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718216442374?e=1733961600&v=beta&t=sq7_Ul7B1TnCWmMOX2aadbKGvwruMbJ-kRL1pqa1d-w" alt="" />
+                                        <img src={user?.profile_url} alt="" />
                                     </div>
                                 </div>
                                 <div className="menuText">
-                                    Sajad
+                                    {user ? `${user.first_name} ${user.last_name}` : null}
                                 </div>
                             </Link>
                         </div>) : (<></>)}
