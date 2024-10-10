@@ -6,6 +6,7 @@ import grovixLog from '@/assets/image/grovix-lab.png';
 import Image from 'next/image';
 import Link from "next/link";
 import Head from 'next/head';
+import { getCookie } from "cookies-next";
 
 // export const metadata = {
 //     title: "SignUp / Grovix Lab",
@@ -22,6 +23,8 @@ export default function App() {
     };
 
     useEffect(() => {
+        let jwt = getCookie("token");
+        jwt ? (location.href = "/") : null;
         document.title = "Register / Grovix Lab";
     }, []);
 
