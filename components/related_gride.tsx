@@ -65,7 +65,7 @@ const Gride: React.FC<Article> = ({ id }) => {
         };
 
         fetchData();
-    }, []);
+    }, [id]);
 
     return (
         <div className="grid-container">
