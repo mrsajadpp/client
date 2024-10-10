@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Dark theme (left side of the image) */
+    --dark-primary: #0078e8;
+    --dark-text-primary: #E5E5E5;
+    --dark-text-secondary: #A9A9A9;
+    --dark-background-primary: #121212;
+    --dark-background-secondary: #1A1A1A;
+    --dark-background-tertiary: #242424;
+    --dark-accent: #1FBFB8;
+
+    /* Light theme (right side of the image) */
+    --light-primary: #0078e8;
+    --light-text-primary: #000000;
+    --light-text-secondary: #666666;
+    --light-background-primary: #FFFFFF;
+    --light-background-secondary: #F2F2F2;
+    --light-background-tertiary: #E0E0E0;
+    --light-accent: #1FBFB8;
+}
+
+.profile-container {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container .profile-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--light-background-tertiary);
+}
+
+.profile-container .profile-area .profile-image {
+    width: calc(100% - 20px);
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.profile-container .profile-area .profile-image .image {
+    width: 90px;
+    height: 90px;
+    border-radius: 80px;
+    overflow: hidden;
+}
+
+.profile-container .profile-area .profile-image .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-container .profile-area .profile-image .follow-button {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.profile-container .profile-area .profile-image .follow-button button {
+    width: 50px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container .profile-area .profile-image .follow-button button span {
+    font-size: 16px;
+}
+
+.profile-container .profile-area .profile-image .follow-button button .icon i {
+    font-size: 19px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.profile-container .profile-area .profile-name {
+    width: calc(100% -20px);
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    height: 80px;
+}
+
+.profile-container .profile-area .profile-name h2 {
+    font-size: 19px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.profile-container .profile-area .profile-name span {
+    font-size: 13px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.profile-container .metrices {
+    width: 100%;
+    height: calc(100vh - 450px);
+    color: var(--dark-background-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
