@@ -63,7 +63,7 @@ const Gride = () => {
     }, []);
 
     return (
-        <div className="grid-container">
+        <div className="grid-container t-grid-container">
             {loading
                 ? Array.from({ length: 6 }).map((_, index) => <SkeletonLoader key={index} />) // Display skeleton loaders
                 : data.map((card, index) => (
