@@ -4,13 +4,14 @@ import Script from 'next/script';
 import Image from 'next/image';
 import MobileHeader from "@/components/mobile_header";
 import DeskHeader from "@/components/desktop_header";
-import Gride from "@/components/intrest_gride";
+import Gride from "@/components/related_gride";
 import Footer from "@/components/footer";
 import React from 'react';
 import { GetServerSideProps } from 'next';
 import "@/app/css/article.css";
 
 interface Article {
+    _id: string;
     author_id: string;
     author_name: string;
     title: string;
@@ -78,7 +79,7 @@ const App: React.FC<ArticlePageProps> = ({ article }) => {
                             <h2>Related Articles</h2>
                         </div>
                         <div className="grideGroup">
-                            <Gride />
+                            <Gride id={article._id} />
                         </div>
                     </div>
                 </div>
