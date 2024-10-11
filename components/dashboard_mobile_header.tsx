@@ -7,7 +7,7 @@ import { getCookie } from 'cookies-next';
 
 // Define the props interface
 interface MobileHeaderProps {
-    page: 'home' | 'search' | 'trending' | "dashboard" | 'null';
+    page: 'dashboard' | 'settings' | 'articles' | "earnings" | 'null';
     path: React.ReactNode;
 }
 
@@ -92,7 +92,7 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                                 </div>
                             </Link>
                         </div>
-                        <div className={`menuItem ${page === "search" ? "active" : "no-active"}`}>
+                        <div className={`menuItem ${page === "articles" ? "active" : "no-active"}`}>
                             <a href="/">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-pen-swirl"></i>
@@ -102,7 +102,7 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                                 </div>
                             </a>
                         </div>
-                        <div className={`menuItem ${page === "trending" ? "active" : "no-active"}`}>
+                        <div className={`menuItem ${page === "earnings" ? "active" : "no-active"}`}>
                             <Link href="/trending">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-money-bill-wave"></i>
@@ -112,7 +112,7 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                                 </div>
                             </Link>
                         </div>
-                        <div className={`menuItem ${page === "trending" ? "active" : "no-active"}`}>
+                        <div className={`menuItem ${page === "settings" ? "active" : "no-active"}`}>
                             <Link href="/trending">
                                 <div className="menuIcon">
                                     <i className="fi fi-rr-settings"></i>
