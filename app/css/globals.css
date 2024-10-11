@@ -422,12 +422,11 @@ button {
 }
 
 /* General Hidden Class */
-.hidden {
+/* .hidden {
     opacity: 0;
     transform: translateX(-100%) translateY(-100%);
-    /* Keep out of view */
     visibility: hidden;
-}
+} */
 
 /* Footer */
 
