@@ -1,8 +1,8 @@
 import "@fontsource/poppins";
 import Script from 'next/script';
 import Image from 'next/image';
-import MobileHeader from "@/components/mobile_header";
-import DeskHeader from "@/components/desktop_header";
+import MobileHeader from "@/components/dashboard_mobile_header";
+import DeskHeader from "@/components/dashboard_desktop_header";
 import Gride from "@/components/trending_gride";
 import Footer from "@/components/footer";
 import Link from "next/link";
