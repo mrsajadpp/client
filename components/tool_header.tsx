@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import grovixLog from '@/assets/image/grovix-lab.png';
+import thintryLogo from '@/public/img/logo.png';
 
 
 const Header = () => {

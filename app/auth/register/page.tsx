@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "@fontsource/poppins";
 import "@/app/css/login.css";
-import grovixLog from '@/assets/image/grovix-lab.png';
+import thintryLogo from '@/public/img/logo.png';
 import Image from 'next/image';
 import Link from "next/link";
 import Head from 'next/head';
@@ -117,7 +117,7 @@ export default function App() {
                     // OTP Form
                     <form id="form" className="regForm" onSubmit={handleSubmitOtp}>
                         <div className="inputImage">
-                            <img src={grovixLog.src} alt="" />
+                            <img src={thintryLogo.src} alt="" />
                         </div>
                         <div className="inputBox">
                             <input
@@ -143,7 +143,7 @@ export default function App() {
                     // Registration Form
                     <form id="form" className="regForm" onSubmit={handleSubmitRegistration}>
                         <div className="inputImage">
-                            <img src={grovixLog.src} alt="" />
+                            <img src={thintryLogo.src} alt="" />
                         </div>
                         <div className="inputBox">
                             <input

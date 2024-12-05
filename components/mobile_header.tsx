@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import grovixLog from '@/assets/image/grovix-lab.png';
+import thintryLogo from '@/public/img/logo.png';
 import { getCookie } from 'cookies-next';
 
 // Define the props interface
@@ -50,7 +50,7 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
                 </div>
                 <div className="logo">
                     <Link href="/">
-                        <img src={grovixLog.src} alt="CineCast" />
+                        <img src={thintryLogo.src} alt="CineCast" />
                     </Link>
                 </div>
                 <div className="right">

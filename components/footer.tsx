@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import grovixLog from '@/assets/image/grovix-lab.png';
+import thintryLogo from '@/public/img/logo.png';
 import "@/app/css/gride.css";
 
 const Gride = () => {
@@ -10,7 +10,7 @@ const Gride = () => {
         <>
             <footer className="footer">
                 <div className="footer__addr">
-                    <img loading="lazy" decoding="async" className="footer__logo" src={grovixLog.src} alt="" />
+                    <img loading="lazy" decoding="async" className="footer__logo" src={thintryLogo.src} alt="" />
 
                     <h2></h2>
 

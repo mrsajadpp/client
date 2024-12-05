@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "@fontsource/poppins";
 import "@/app/css/login.css";
-import grovixLog from '@/assets/image/grovix-lab.png';
+import thintryLogo from '@/public/img/logo.png';
 import Image from 'next/image';
 import Link from "next/link";
 import Head from 'next/head';
@@ -63,7 +63,7 @@ export default function App() {
             <div className="container">
                 <form className="regForm" onSubmit={handleSubmit}>
                     <div className="inputImage">
-                        <img src={grovixLog.src} alt="Grovix Lab Logo" />
+                        <img src={thintryLogo.src} alt="Grovix Lab Logo" />
                     </div>
                     <div className="inputBox">
                         <input type="email" name="email" id="email" onChange={(e) => setUsername(e.target.value)} placeholder="Email" />
