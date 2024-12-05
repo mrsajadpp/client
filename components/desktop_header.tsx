@@ -59,7 +59,7 @@ const Header: React.FC<MobileHeaderProps> = ({ page, path }) => {
         const fetchUserData = async () => {
             if (jwt) {
                 try {
-                    const response = await fetch('http://192.168.1.60:3001/api/user/own/user-data', {
+                    const response = await fetch('http://192.168.1.60:3002/api/user/own/user-data', {
                         method: 'GET',
                         headers: {
                             'Authorization': `${jwt}`,

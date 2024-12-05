@@ -46,7 +46,7 @@ export default function App() {
     const handleSubmitRegistration = async (e: React.FormEvent) => {
         e.preventDefault(); // Prevent the default form submission
         try {
-            const response = await fetch('http://192.168.1.60:3001/api/auth/register', {
+            const response = await fetch('http://192.168.1.60:3002/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export default function App() {
     const handleSubmitOtp = async (e: React.FormEvent) => {
         e.preventDefault(); // Prevent the default form submission
         try {
-            const response = await fetch('http://192.168.1.60:3001/api/auth/verify-otp', { // Replace with your actual API endpoint
+            const response = await fetch('http://192.168.1.60:3002/api/auth/verify-otp', { // Replace with your actual API endpoint
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

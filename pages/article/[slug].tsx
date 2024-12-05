@@ -100,7 +100,7 @@ export const getServerSideProps: GetServerSideProps<ArticlePageProps> = async (c
         const jwt = await getCookie('token', { req: context.req, res: context.res });
 
         // Make a POST request to your API with the slug
-        const response = await fetch(jwt ? 'http://192.168.1.60:3001/api/article/auth/fetch' : 'http://192.168.1.60:3001/api/article/fetch', {
+        const response = await fetch(jwt ? 'http://192.168.1.60:3002/api/article/auth/fetch' : 'http://192.168.1.60:3002/api/article/fetch', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

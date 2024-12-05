@@ -32,7 +32,7 @@ export default function App() {
     }, []);
 
     const login = async (username: string, password: string) => {
-        const res = await fetch('http://192.168.1.60:3001/api/auth/login', {
+        const res = await fetch('http://192.168.1.60:3002/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

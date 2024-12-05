@@ -46,7 +46,7 @@ const Gride: React.FC<Article> = ({ id }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('http://192.168.1.60:3001/api/article/list/fetch/related?id=' + id);
+                const res = await fetch('http://192.168.1.60:3002/api/article/list/fetch/related?id=' + id);
                 const result = await res.json();
 
                 const articles = result.articles.map((article: any) => ({

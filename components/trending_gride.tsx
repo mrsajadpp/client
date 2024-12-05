@@ -42,7 +42,7 @@ const Gride = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('http://192.168.1.60:3001/api/article/list/fetch/trending');
+                const res = await fetch('http://192.168.1.60:3002/api/article/list/fetch/trending');
                 const result = await res.json();
 
                 const articles = result.articles.map((article: any) => ({
